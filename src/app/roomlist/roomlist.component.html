@@ -15,8 +15,8 @@
         <td>{{item.amenties}}</td>
         <td><span class="">{{item.price}}</span></td>
         <td>{{item.photo}}</td>
-        <td>{{item.checkinTime}}</td>
-        <td><span class="">{{item.checkoutTime}}</span></td>
+        <td>{{item.checkinTime | date:'short'}}</td>
+        <td><span class="">{{item.checkoutTime | date:'short'}}</span></td>
       </tr>
 
     </tbody>
