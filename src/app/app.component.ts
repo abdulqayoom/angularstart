@@ -7,7 +7,7 @@ import { dummy } from './dummy';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular';
+  title = 'hotel Inventory System';
  public user:dummy
 
 
