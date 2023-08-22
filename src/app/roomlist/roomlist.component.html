@@ -1,0 +1,23 @@
+<table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Room Type</th>
+        <th scope="col">Amenties</th>
+        <th scope="col">Price</th>
+        <th scope="col">Photo</th>
+        <th scope="col">Checkin Time</th>
+        <th scope="col">checkout Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of  _RoomList">
+        <td>{{item.roomType}}</td>
+        <td>{{item.amenties}}</td>
+        <td><span class="">{{item.price}}</span></td>
+        <td>{{item.photo}}</td>
+        <td>{{item.checkinTime}}</td>
+        <td><span class="">{{item.checkoutTime}}</span></td>
+      </tr>
+
+    </tbody>
+  </table>
