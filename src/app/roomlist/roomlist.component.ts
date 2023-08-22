@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, DoCheck, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { IroomList } from './IroomList';
 
 @Component({
@@ -6,7 +6,10 @@ import { IroomList } from './IroomList';
   templateUrl: './roomlist.component.html',
   styleUrls: ['./roomlist.component.css']
 })
-export class RoomlistComponent implements OnInit {
+export class RoomlistComponent implements OnInit,DoCheck {
+  ngDoCheck(): void {
+   console.log("Docheck is calledfor every change in ur application");
+  }
   @Input() rooms:IroomList[]=[];
   @Output() selectedRoom= new EventEmitter<IroomList>();
    ngOnInit(): void {
