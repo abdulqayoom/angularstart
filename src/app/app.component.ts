@@ -1,6 +1,7 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
 import { dummy } from './dummy';
 import { HeaderComponent } from './header/header.component';
+import { RoomsComponent } from './rooms/rooms.component';
 
 @Component({
   selector: 'app-root',
@@ -8,25 +9,19 @@ import { HeaderComponent } from './header/header.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit ,AfterViewInit{
- public user:dummy
-@ViewChild(HeaderComponent) headercomponent!:HeaderComponent
+ public title="Hotel management";
+@ViewChild(HeaderComponent) headercomponent!:HeaderComponent;
+@ViewChild('user',{read:ViewContainerRef}) vcr!:ViewContainerRef;
 
-constructor(){
+constructor(){}
 
-  this.user={
-    id:2,
-    name:"hafil",
-    age:22
-  
-  }
-  console.log(this.user)
-  console.log(this.user)
-}
+
   ngAfterViewInit(): void {
-    console.log(this.headercomponent);
+    this.headercomponent.tittle= this.title;
+    const contref=this.vcr.createComponent(RoomsComponent)
   }
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+   
   }
 
 
