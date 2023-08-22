@@ -18,6 +18,7 @@ export class RoomsComponent implements OnInit {
         photo: "room1.jpg",
         checkinTime: new Date("2023-08-22T14:00:00"),
         checkoutTime: new Date("2023-08-23T11:00:00"),
+        status:"Active"
       },
       {
         roomType: "Deluxe",
@@ -25,7 +26,9 @@ export class RoomsComponent implements OnInit {
         price: 150,
         photo: "room2.jpg",
         checkinTime: new Date("2023-08-22T15:00:00"),
-        checkoutTime: new Date("2023-08-23T12:00:00"),
+        checkoutTime: new Date("2023-08-23T12:00:00")
+        ,
+        status:"Active"
       },
       {
         roomType: "Suite",
@@ -34,6 +37,8 @@ export class RoomsComponent implements OnInit {
         photo: "room3.jpg",
         checkinTime: new Date("2023-08-23T14:00:00"),
         checkoutTime: new Date("2023-08-24T11:00:00"),
+        
+        status:"Active"
       },
       {
         roomType: "Standard",
@@ -42,6 +47,7 @@ export class RoomsComponent implements OnInit {
         photo: "room4.jpg",
         checkinTime: new Date("2023-08-23T15:00:00"),
         checkoutTime: new Date("2023-08-24T12:00:00"),
+        status:"Active"
       },
       {
         roomType: "Deluxe",
@@ -50,6 +56,7 @@ export class RoomsComponent implements OnInit {
         photo: "room5.jpg",
         checkinTime: new Date("2023-08-24T14:00:00"),
         checkoutTime: new Date("2023-08-25T11:00:00"),
+        status:"Active"
       },
       {
         roomType: "Suite",
@@ -58,6 +65,7 @@ export class RoomsComponent implements OnInit {
         photo: "room6.jpg",
         checkinTime: new Date("2023-08-25T15:00:00"),
         checkoutTime: new Date("2023-08-26T12:00:00"),
+        status:"Active"
       },
       {
         roomType: "Standard",
@@ -66,6 +74,7 @@ export class RoomsComponent implements OnInit {
         photo: "room7.jpg",
         checkinTime: new Date("2023-08-26T14:00:00"),
         checkoutTime: new Date("2023-08-27T11:00:00"),
+        status:"Active"
       },
       {
         roomType: "Deluxe",
@@ -74,6 +83,7 @@ export class RoomsComponent implements OnInit {
         photo: "room8.jpg",
         checkinTime: new Date("2023-08-27T15:00:00"),
         checkoutTime: new Date("2023-08-28T12:00:00"),
+        status:"Active"
       },
       {
         roomType: "Suite",
@@ -82,6 +92,7 @@ export class RoomsComponent implements OnInit {
         photo: "room9.jpg",
         checkinTime: new Date("2023-08-28T14:00:00"),
         checkoutTime: new Date("2023-08-29T11:00:00"),
+        status:"Active"
       },
       {
         roomType: "Standard",
@@ -90,6 +101,7 @@ export class RoomsComponent implements OnInit {
         photo: "room10.jpg",
         checkinTime: new Date("2023-08-29T15:00:00"),
         checkoutTime: new Date("2023-08-30T12:00:00"),
+        status:"Active"
       }
     ];
   }
@@ -97,6 +109,10 @@ export class RoomsComponent implements OnInit {
     availableRooms: 10,
     bookedRooms: 5,
     totalRooms: 20
+  }
+  roomSelected(room:IroomList)
+  {
+console.log(room)
   }
 
 }

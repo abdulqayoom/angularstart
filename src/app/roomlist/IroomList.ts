@@ -4,5 +4,6 @@ export interface IroomList{
     price:number,
     photo:string,
     checkinTime:Date,
-    checkoutTime:Date
+    checkoutTime:Date,
+    status:string
 }

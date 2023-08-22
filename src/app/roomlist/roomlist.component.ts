@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { IroomList } from './IroomList';
 
 @Component({
@@ -8,15 +8,15 @@ import { IroomList } from './IroomList';
 })
 export class RoomlistComponent implements OnInit {
   @Input() rooms:IroomList[]=[];
+  @Output() selectedRoom= new EventEmitter<IroomList>();
    ngOnInit(): void {
 
    }
+   changeStatus(room:IroomList)
+   {
+    room.status="Inactive"
+    this.selectedRoom.emit(room);
 
-
- 
-
-
-  
-  
+   }
   
 }

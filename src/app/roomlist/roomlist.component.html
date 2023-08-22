@@ -7,6 +7,8 @@
         <th scope="col">Photo</th>
         <th scope="col">Checkin Time</th>
         <th scope="col">checkout Time</th>
+        <th scope="col">Status</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -17,6 +19,8 @@
         <td>{{item.photo}}</td>
         <td>{{item.checkinTime | date:'short'}}</td>
         <td><span class="">{{item.checkoutTime | date:'short'}}</span></td>
+        <td><span class="">{{item.status}}</span></td>
+        <td><button type="button" class="btn btn-danger" (click)="changeStatus(item)">Make Inactive</button></td>
       </tr>
 
     </tbody>

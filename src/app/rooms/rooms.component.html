@@ -25,7 +25,7 @@
           </div>
         </div>
       </div>
-      <div class="col" **ngIf="room.bookedRooms+room.availableRooms!=totalRooms">
+      <div class="col" *ngIf="room.bookedRooms+room.availableRooms!=room.totalRooms">
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">under maintance</h5>
@@ -36,6 +36,6 @@
     </div>
     
     <h2 class="mt-5">Rooms Detail</h2>
-   <app-roomlist [rooms]="_RoomList"></app-roomlist>
+   <app-roomlist [rooms]="_RoomList" (selectedRoom)="roomSelected($event)"></app-roomlist>
 
   
