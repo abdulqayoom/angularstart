@@ -6,10 +6,7 @@ import { IroomList } from './IroomList';
   templateUrl: './roomlist.component.html',
   styleUrls: ['./roomlist.component.css']
 })
-export class RoomlistComponent implements OnInit,DoCheck {
-  ngDoCheck(): void {
-   console.log("Docheck is calledfor every change in ur application");
-  }
+export class RoomlistComponent implements OnInit {
   @Input() rooms:IroomList[]=[];
   @Output() selectedRoom= new EventEmitter<IroomList>();
    ngOnInit(): void {

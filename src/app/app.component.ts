@@ -1,15 +1,15 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { dummy } from './dummy';
+import { HeaderComponent } from './header/header.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'hotel Inventory System';
+export class AppComponent implements OnInit ,AfterViewInit{
  public user:dummy
-
+@ViewChild(HeaderComponent) headercomponent!:HeaderComponent
 
 constructor(){
 
@@ -22,6 +22,12 @@ constructor(){
   console.log(this.user)
   console.log(this.user)
 }
+  ngAfterViewInit(): void {
+    console.log(this.headercomponent);
+  }
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
 
 
 }
