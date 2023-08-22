@@ -1,7 +1,8 @@
 import { AfterViewInit, Component, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
 import { dummy } from './dummy';
-import { HeaderComponent } from './header/header.component';
-import { RoomsComponent } from './rooms/rooms.component';
+import {RoomsComponent} from './Room/rooms/rooms.component'
+import{HeaderComponent} from './Shared/header/header.component'
+
 
 @Component({
   selector: 'app-root',

@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {RoomsComponent} from './Room/rooms/rooms.component'
+import{RoomlistComponent}from './Room/roomlist/roomlist.component'
+import{HeaderComponent} from './Shared/header/header.component'
 import { AppComponent } from './app.component';
-import { RoomsComponent } from './rooms/rooms.component';
+
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { RoomlistComponent } from './roomlist/roomlist.component';
-import { HeaderComponent } from './header/header.component';
+
 
 @NgModule({
   declarations: [
