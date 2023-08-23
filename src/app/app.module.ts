@@ -6,6 +6,7 @@ import{HeaderComponent} from './Shared/header/header.component'
 import { AppComponent } from './app.component';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { APP_CONFIG, APP_SERVICE_CONFIG } from './AppConfig/appconfig.service';
 
 
 @NgModule({
@@ -19,7 +20,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     BrowserModule,
     NgbModule
   ],
-  providers: [],
+  providers: [
+    {
+    provide:APP_SERVICE_CONFIG,
+    useValue:APP_CONFIG
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

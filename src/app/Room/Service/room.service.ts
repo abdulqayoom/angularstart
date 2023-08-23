@@ -1,9 +1,12 @@
-import { Injectable, OnInit } from '@angular/core';
+import { Inject, Injectable, OnInit } from '@angular/core';
+import { APP_SERVICE_CONFIG } from '../../AppConfig/appconfig.service';
+import { AppConfig } from '../../AppConfig/appconfig.interface';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RoomService implements OnInit {
+
   _RoomList=[
     {
       roomType: "Standard",
@@ -99,12 +102,13 @@ export class RoomService implements OnInit {
     }
   ];
 
-  constructor() { }
+  constructor(@Inject(APP_SERVICE_CONFIG) private config:AppConfig) { }
   ngOnInit(): void {
-    
+
   }
   getRoomList()
   {
+    console.log(this.config.apiEndPoint)
 return this._RoomList;
   }
 }
