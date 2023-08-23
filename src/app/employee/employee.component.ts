@@ -17,13 +17,13 @@ export class EmployeeComponent implements OnInit {
   };
   constructor(private _user:ServiceService){}
   ngOnInit(): void {
-    this._user.getusers().subscribe((data)=>{this.user=data;
+    this._user.getuser$.subscribe((data)=>{this.user=data;
     console.warn(data);}
     )
-    this._user.postuser(this.userinfo).subscribe((data)=>{
-      debugger
-      console.warn(data)
-    })
+    // this._user.postuser(this.userinfo).subscribe((data)=>{
+    //   debugger
+    //   console.warn(data)
+    // })
   }
 
 }
