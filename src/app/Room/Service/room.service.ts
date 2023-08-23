@@ -1,7 +1,8 @@
 import { Inject, Injectable, OnInit } from '@angular/core';
 import { APP_SERVICE_CONFIG } from '../../AppConfig/appconfig.service';
 import { AppConfig } from '../../AppConfig/appconfig.interface';
-
+import 
+{HttpClient} from '@angular/common/http'
 @Injectable({
   providedIn: 'root'
 })
@@ -102,13 +103,20 @@ export class RoomService implements OnInit {
     }
   ];
 
-  constructor(@Inject(APP_SERVICE_CONFIG) private config:AppConfig) { }
+  constructor(@Inject(APP_SERVICE_CONFIG) private config:AppConfig,
+ private http:HttpClient ) { }
   ngOnInit(): void {
 
   }
   getRoomList()
   {
-    console.log(this.config.apiEndPoint)
+
+
+  //  console.log(this.config.apiEndPoint)
 return this._RoomList;
+  }
+  getuserList()
+  {
+    return this.http.get(this.config.apiEndPoint+'/posts');
   }
 }

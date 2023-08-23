@@ -12,9 +12,15 @@ export class RoomsComponent implements OnInit {
   constructor(private rooms:RoomService){
 
   }
+  public _userlist={};
   _RoomList: IroomList[] = [];
   ngOnInit(): void {
    this._RoomList=this.rooms.getRoomList();
+   this.rooms.getuserList().subscribe((data)=>{
+    this._userlist=data;
+    console.warn(this._userlist);
+   });
+   //console.log(this._userlist)
    
   }
   room:Iroom={
@@ -27,6 +33,7 @@ export class RoomsComponent implements OnInit {
 console.log(room)
   }
 
+ 
 }
 
 

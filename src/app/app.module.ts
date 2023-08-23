@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { APP_CONFIG, APP_SERVICE_CONFIG } from './AppConfig/appconfig.service';
+import { HttpClientModule } from '@angular/common/http';
+import { EmployeeComponent } from './employee/employee.component';
 
 
 @NgModule({
@@ -14,11 +16,13 @@ import { APP_CONFIG, APP_SERVICE_CONFIG } from './AppConfig/appconfig.service';
     AppComponent,
     RoomsComponent,
     RoomlistComponent,
-    HeaderComponent
+    HeaderComponent,
+    EmployeeComponent
   ],
   imports: [
     BrowserModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
   providers: [
     {

@@ -2,6 +2,7 @@ import { AfterViewInit, Component, OnInit, ViewChild, ViewContainerRef } from '@
 import { dummy } from './dummy';
 import {RoomsComponent} from './Room/rooms/rooms.component'
 import{HeaderComponent} from './Shared/header/header.component'
+import { EmployeeComponent } from './employee/employee.component';
 
 
 @Component({
@@ -19,7 +20,7 @@ constructor(){}
 
   ngAfterViewInit(): void {
     this.headercomponent.tittle= this.title;
-    const contref=this.vcr.createComponent(RoomsComponent)
+    const contref=this.vcr.createComponent(EmployeeComponent)
   }
   ngOnInit(): void {
    

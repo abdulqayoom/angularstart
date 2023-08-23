@@ -1,0 +1,21 @@
+<div class="body">
+<table class="user-table">
+    <thead>
+      <tr>
+        <th>User ID</th>
+        <th>id</th>
+        <th>title</th>
+        <th>Subjet</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of user">
+        <td>{{item.userId}}</td>
+        <td>{{item.id}}</td>
+        <td>{{item.title}}</td>
+        <td>{{item.body}}</td>
+      </tr>
+      <!-- Add more user rows here -->
+    </tbody>
+  </table>
+</div>

@@ -1,4 +1,4 @@
 export const environment = {
-    apiEndPoint:'https://www.api.com'
+    apiEndPoint:'https://jsonplaceholder.typicode.com'
 };
 
