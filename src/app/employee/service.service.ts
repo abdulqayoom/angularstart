@@ -11,9 +11,7 @@ import { shareReplay } from 'rxjs';
 export class ServiceService {
 
   constructor(private http:HttpClient, @Inject(APP_SERVICE_CONFIG) private config:AppConfig) { }
-  getuser$=this.http.get<Iemployee[]>(this.config.apiEndPoint+'/posts').pipe(
-    shareReplay(1)
-  )
+  getuser$=this.http.get<Iemployee[]>(this.config.apiEndPoint+'/posts');
   getusers()
   {
     return this.http.get<Iemployee[]>(this.config.apiEndPoint+'/posts')

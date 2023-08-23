@@ -14,14 +14,13 @@ export class AppComponent implements OnInit ,AfterViewInit{
  public title="Hotel management";
 @ViewChild(HeaderComponent) headercomponent!:HeaderComponent;
 @ViewChild('user',{read:ViewContainerRef}) vcr!:ViewContainerRef;
-@ViewChild('user1',{read:ViewContainerRef}) vcr1!:ViewContainerRef;
 constructor(){}
 
 
   ngAfterViewInit(): void {
     this.headercomponent.tittle= this.title;
     const contref=this.vcr.createComponent(EmployeeComponent)
-    const contref1=this.vcr1.createComponent(EmployeeComponent)
+  
   }
   ngOnInit(): void {
    

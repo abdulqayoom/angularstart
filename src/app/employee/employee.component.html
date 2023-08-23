@@ -1,4 +1,6 @@
+<h4>count:{{ employeecount$ | async}}</h4>
 <div class="body">
+   
 <table class="user-table">
     <thead>
       <tr>
@@ -9,7 +11,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let item of user">
+      <tr *ngFor="let item of room$ | async as list">
         <td>{{item.userId}}</td>
         <td>{{item.id}}</td>
         <td>{{item.title}}</td>
