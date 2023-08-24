@@ -13,10 +13,11 @@ export class ServiceService {
   constructor(private http:HttpClient, @Inject(APP_SERVICE_CONFIG) private config:AppConfig[]) { }
 
   getuser$=this.http.get<Iemployee[]>(this.config[0].apiEndPoint+'/posts');
-  getusers()
+
+  getuserbyid(id:number)
   {
     debugger
-    return this.http.get<Iemployee[]>(this.config[0].apiEndPoint+'/posts')
+    return this.http.get<Iemployee>(this.config[0].apiEndPoint+ `/posts/${id}`)
   }
   postuser(user:Icreate)
   {

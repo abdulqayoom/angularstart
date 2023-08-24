@@ -12,6 +12,7 @@ import { EmployeeComponent } from './employee/employee.component';
 import { CoreinterceptorInterceptor } from './core/coreinterceptor.interceptor';
 import { AppRoutingModule } from './app-routing.module';
 import { AddemployeeComponent } from './employee/addemployee/addemployee.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { AddemployeeComponent } from './employee/addemployee/addemployee.compone
     BrowserModule,
     NgbModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [
     {
