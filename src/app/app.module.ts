@@ -10,6 +10,8 @@ import { APP_CONFIG, APP_SERVICE_CONFIG } from './AppConfig/appconfig.service';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { EmployeeComponent } from './employee/employee.component';
 import { CoreinterceptorInterceptor } from './core/coreinterceptor.interceptor';
+import { AppRoutingModule } from './app-routing.module';
+import { AddemployeeComponent } from './employee/addemployee/addemployee.component';
 
 
 @NgModule({
@@ -18,12 +20,14 @@ import { CoreinterceptorInterceptor } from './core/coreinterceptor.interceptor';
     RoomsComponent,
     RoomlistComponent,
     HeaderComponent,
-    EmployeeComponent
+    EmployeeComponent,
+    AddemployeeComponent
   ],
   imports: [
     BrowserModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [
     {
