@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Iemployee } from '../Iemployee';
 import { Icreate } from '../employeeDTO/IcreateDTO';
 import { ServiceService } from '../service.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-create',
@@ -21,10 +22,17 @@ export class CreateComponent implements OnInit {
   ngOnInit(): void {
     //throw new Error('Method not implemented.');
   }
-  addemployee()
+  addemployee(create:NgForm)
   {
     this.employeeservice.postuser(this.employee).subscribe((data)=>{
      this.successmessage="employee added"
+     create.resetForm(
+      {
+        body:'',
+     title:"",
+     userId:""
+      }
+     );
     })
    
   }

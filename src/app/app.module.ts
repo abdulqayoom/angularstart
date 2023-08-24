@@ -14,6 +14,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AddemployeeComponent } from './employee/addemployee/addemployee.component';
 import { FormsModule } from '@angular/forms';
 import { CreateComponent } from './employee/create/create.component';
+import { HoverDirective } from './shared/hover.directive';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { CreateComponent } from './employee/create/create.component';
     HeaderComponent,
     EmployeeComponent,
     AddemployeeComponent,
-    CreateComponent
+    CreateComponent,
+    HoverDirective
   ],
   imports: [
     BrowserModule,
