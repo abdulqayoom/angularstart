@@ -16,6 +16,7 @@ export class EmployeeComponent implements OnInit {
     body:"samader",
     title:"SF"
   };
+
   room$=this._user.getuser$;
   employeecount$=this._user.getuser$.pipe(
     map((data)=>
@@ -25,12 +26,9 @@ export class EmployeeComponent implements OnInit {
   constructor(private _user:ServiceService){}
   ngOnInit(): void {
 
-    this._user.getuser$.subscribe((data)=>{this.user=data;
-    console.warn(data);}
-    )
-    // this._user.postuser(this.userinfo).subscribe((data)=>{
+    //  this._user.postuser(this.userinfo).subscribe((data)=>{
     //   debugger
-    //   console.warn(data)
+    // console.warn(data)
     // })
   }
 

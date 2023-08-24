@@ -10,14 +10,17 @@ import { shareReplay } from 'rxjs';
 })
 export class ServiceService {
 
-  constructor(private http:HttpClient, @Inject(APP_SERVICE_CONFIG) private config:AppConfig) { }
-  getuser$=this.http.get<Iemployee[]>(this.config.apiEndPoint+'/posts');
+  constructor(private http:HttpClient, @Inject(APP_SERVICE_CONFIG) private config:AppConfig[]) { }
+
+  getuser$=this.http.get<Iemployee[]>(this.config[0].apiEndPoint+'/posts');
   getusers()
   {
-    return this.http.get<Iemployee[]>(this.config.apiEndPoint+'/posts')
+    debugger
+    return this.http.get<Iemployee[]>(this.config[0].apiEndPoint+'/posts')
   }
   postuser(user:Icreate)
   {
-    return this.http.post(this.config.apiEndPoint+'/posts',user);
+    debugger
+    return this.http.post(this.config[0].apiEndPoint+'/posts',user);
   }
 }

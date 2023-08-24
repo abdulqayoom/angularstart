@@ -7,8 +7,9 @@ import { AppComponent } from './app.component';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { APP_CONFIG, APP_SERVICE_CONFIG } from './AppConfig/appconfig.service';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { EmployeeComponent } from './employee/employee.component';
+import { CoreinterceptorInterceptor } from './core/coreinterceptor.interceptor';
 
 
 @NgModule({
@@ -27,8 +28,10 @@ import { EmployeeComponent } from './employee/employee.component';
   providers: [
     {
     provide:APP_SERVICE_CONFIG,
-    useValue:APP_CONFIG
-    }
+    useValue:APP_CONFIG,
+    multi:true,
+    },
+   { provide: HTTP_INTERCEPTORS, useClass : CoreinterceptorInterceptor, multi : true }
   ],
   bootstrap: [AppComponent]
 })
