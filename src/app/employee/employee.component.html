@@ -1,6 +1,5 @@
 <h4>count:{{ employeecount$ | async}}</h4>
 <div class="body">
-   
 <table class="user-table">
     <thead>
       <tr>
@@ -17,7 +16,7 @@
         <td>{{item.id}}</td>
         <td>{{item.title}}</td>
         <td>{{item.body}}</td>
-        <td><button class="primary" [routerLink]="['/employee/',item.id]" routerLinkActive="router-link-active" ]>Edit </button></td>
+        <td><button class="primary" [routerLink]="['/employee/',item.id]" routerLinkActive="router-link-active">Edit </button></td>
       </tr>
       <!-- Add more user rows here -->
     </tbody>

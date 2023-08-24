@@ -13,6 +13,7 @@ import { CoreinterceptorInterceptor } from './core/coreinterceptor.interceptor';
 import { AppRoutingModule } from './app-routing.module';
 import { AddemployeeComponent } from './employee/addemployee/addemployee.component';
 import { FormsModule } from '@angular/forms';
+import { CreateComponent } from './employee/create/create.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { FormsModule } from '@angular/forms';
     RoomlistComponent,
     HeaderComponent,
     EmployeeComponent,
-    AddemployeeComponent
+    AddemployeeComponent,
+    CreateComponent
   ],
   imports: [
     BrowserModule,

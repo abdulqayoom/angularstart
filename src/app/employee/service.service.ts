@@ -17,7 +17,7 @@ export class ServiceService {
   getuserbyid(id:number)
   {
     debugger
-    return this.http.get<Iemployee>(this.config[0].apiEndPoint+ `/posts/${id}`)
+    return this.http.get<Iemployee>(this.config[0].apiEndPoint+ `/post/${id}`)
   }
   postuser(user:Icreate)
   {

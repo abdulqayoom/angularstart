@@ -19,6 +19,7 @@ export class EmployeeComponent implements OnInit {
 
   room$=this._user.getuser$;
   employeecount$=this._user.getuser$.pipe(
+
     map((data)=>
      data.length
     )
