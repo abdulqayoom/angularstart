@@ -5,22 +5,21 @@ import { RoomsComponent } from './Room/rooms/rooms.component';
 
 
 
-const routes:Routes=[
- 
+const routes: Routes = [
+
   {
-    path:"rooms",component:RoomsComponent
+    path: "rooms",
+    loadChildren: () => import('./Room/rooms.module').then(m => m.RoomsModule)
   },
   {
-    path:'',redirectTo:"/rooms",pathMatch:'full'
+    path: "employee",
+    loadChildren: () => import('./employee/employee.module').then(m => m.EmployeeModule)
   },
-  {
-    path:'**',redirectTo:"/rooms",pathMatch:'full'
-  }
 ];
 @NgModule({
   declarations: [],
   imports: [RouterModule.forRoot(routes)],
-exports:[ RouterModule]
-  
+  exports: [RouterModule]
+
 })
 export class AppRoutingModule { }

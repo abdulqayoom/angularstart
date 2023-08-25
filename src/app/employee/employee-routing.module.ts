@@ -6,14 +6,14 @@ import { AddemployeeComponent } from './addemployee/addemployee.component';
 
 const routes: Routes = [
   {
-    path:"employee",component:EmployeeComponent
+    path: "", component: EmployeeComponent
   },
-  
+
   {
-    path:"employee/add",component:CreateComponent ,pathMatch:'full'
+    path: "add", component: CreateComponent, pathMatch: 'full'
   },
   {
-    path:"employee/:id",component:AddemployeeComponent
+    path: ":id", component: AddemployeeComponent
   },
 ];
 
