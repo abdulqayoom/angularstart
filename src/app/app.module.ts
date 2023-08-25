@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { HoverDirective } from './shared/hover.directive';
 import { EmailDirective } from './validator/email.directive';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { EmailDirective } from './validator/email.directive';
     HeaderComponent,
 
     HoverDirective,
-    EmailDirective
+    EmailDirective,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
