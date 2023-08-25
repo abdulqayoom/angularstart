@@ -15,6 +15,7 @@ import { AddemployeeComponent } from './employee/addemployee/addemployee.compone
 import { FormsModule } from '@angular/forms';
 import { CreateComponent } from './employee/create/create.component';
 import { HoverDirective } from './shared/hover.directive';
+import { EmailDirective } from './validator/email.directive';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { HoverDirective } from './shared/hover.directive';
     EmployeeComponent,
     AddemployeeComponent,
     CreateComponent,
-    HoverDirective
+    HoverDirective,
+    EmailDirective
   ],
   imports: [
     BrowserModule,
