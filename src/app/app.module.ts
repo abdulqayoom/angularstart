@@ -9,10 +9,11 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 
 import { CoreinterceptorInterceptor } from './core/coreinterceptor.interceptor';
 import { AppRoutingModule } from './app-routing.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HoverDirective } from './shared/hover.directive';
 import { EmailDirective } from './validator/email.directive';
 import { LoginComponent } from './login/login.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -31,6 +32,8 @@ import { LoginComponent } from './login/login.component';
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule
 
   ],
   providers: [

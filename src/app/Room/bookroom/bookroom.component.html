@@ -1,0 +1,47 @@
+<form [formGroup]="employee" (ngSubmit)="bookroom()">
+    <!-- 2 column grid layout with text inputs for the first and last names -->
+    <div class="row mb-4">
+        <div class="col">
+            <div class="form-outline">
+                <input type="text" id="form6Example1" class="form-control" formControlName="roomType" />
+                <label class="form-label" for="form6Example1">roomType</label>
+            </div>
+        </div>
+        <div class="col">
+            <div class="form-outline">
+                <input type="text" id="form6Example2" class="form-control" formControlName="amenties" />
+                <label class="form-label" for="form6Example2">amenties</label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Text input -->
+    <div class="form-outline mb-4">
+        <input type="text" id="form6Example3" class="form-control" formControlName="price" />
+        <label class="form-label" for="form6Example3">price</label>
+    </div>
+    <div formGroupName="address">
+        <!-- Text input -->
+        <div class="form-outline mb-4">
+            <input type="text" id="form6Example4" class="form-control" formControlName="addressLine1" />
+            <label class="form-label" for="form6Example4">addressLine1</label>
+        </div>
+
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+            <input type="email" id="form6Example5" class="form-control" formControlName="addressLine2" />
+            <label class="form-label" for="form6Example5">AddressLine2</label>
+        </div>
+
+        <!-- Number input -->
+        <div class="form-outline mb-4">
+            <input type="number" id="form6Example6" class="form-control" formControlName="city" />
+            <label class="form-label" for="form6Example6">City</label>
+        </div>
+
+    </div>
+
+    <!-- Submit button -->
+    <button type="submit" class="btn btn-primary btn-block mb-4">Place order</button>
+
+</form>
