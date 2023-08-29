@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { ErrorHandler, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HeaderComponent } from './Shared/header/header.component'
 import { AppComponent } from './app.component';
@@ -14,6 +14,7 @@ import { HoverDirective } from './shared/hover.directive';
 import { EmailDirective } from './validator/email.directive';
 import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { GlobalErrorHandler } from './errorhandler.service';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
       useValue: APP_CONFIG,
       multi: true,
     },
-    { provide: HTTP_INTERCEPTORS, useClass: CoreinterceptorInterceptor, multi: true }
+    { provide: HTTP_INTERCEPTORS, useClass: CoreinterceptorInterceptor, multi: true },
+    { provide: ErrorHandler, useClass: GlobalErrorHandler }
   ],
   bootstrap: [AppComponent]
 })

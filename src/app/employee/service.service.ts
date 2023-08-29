@@ -1,5 +1,5 @@
 import { Inject, Injectable } from '@angular/core';
-import {HttpClient}from '@angular/common/http'
+import { HttpClient } from '@angular/common/http'
 import { APP_SERVICE_CONFIG } from '../AppConfig/appconfig.service';
 import { AppConfig } from '../AppConfig/appconfig.interface';
 import { Iemployee } from './Iemployee';
@@ -10,18 +10,16 @@ import { shareReplay } from 'rxjs';
 })
 export class ServiceService {
 
-  constructor(private http:HttpClient, @Inject(APP_SERVICE_CONFIG) private config:AppConfig[]) { }
+  constructor(private http: HttpClient, @Inject(APP_SERVICE_CONFIG) private config: AppConfig[]) { }
 
-  getuser$=this.http.get<Iemployee[]>(this.config[0].apiEndPoint+'/posts');
+  getuser$ = this.http.get<Iemployee[]>(this.config[0].apiEndPoint + '/postsgffgf');
 
-  getuserbyid(id:number)
-  {
+  getuserbyid(id: number) {
     debugger
-    return this.http.get<Iemployee>(this.config[0].apiEndPoint+ `/post/${id}`)
+    return this.http.get<Iemployee>(this.config[0].apiEndPoint + `/post/${id}`)
   }
-  postuser(user:Icreate)
-  {
+  postuser(user: Icreate) {
     debugger
-    return this.http.post(this.config[0].apiEndPoint+'/posts',user);
+    return this.http.post(this.config[0].apiEndPoint + '/posts', user);
   }
 }
